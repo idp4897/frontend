@@ -21,7 +21,9 @@ export const BodyCard = (props: {
   }, []);
 
   return (
-    <div style={{ width: "100%", height: height, padding: 16 }}>
+    <div
+      style={{ width: "100%", height: height, padding: 16, overflow: "scroll" }}
+    >
       <Card
         style={{ height: "100%" }}
         title={title}
@@ -40,6 +42,7 @@ export const BodyCard = (props: {
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-end",
+            marginTop: 4,
           }}
         >
           {footer}

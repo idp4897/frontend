@@ -2,6 +2,7 @@
 
 import { BodyCard } from "@/components/BodyCard";
 import { LandingElement } from "@/element/main/landing";
+import { PersonalInformationElement } from "@/element/main/personal";
 import { Button, Card, Form, Radio, Steps, Typography } from "antd";
 import { title } from "process";
 import React from "react";
@@ -22,10 +23,7 @@ const IndexPage = () => {
         },
         {
           title: "Personal Information",
-          content: (
-            <>
-            </>
-          ),
+          content: <PersonalInformationElement form={form} />,
         },
       ];
     }, [form]);
@@ -67,7 +65,13 @@ const IndexPage = () => {
         </div>
       }
     >
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          overflowY: "scroll",
+        }}
+      >
         <Steps current={current} items={items} />
         {steps[current].content}
       </div>
